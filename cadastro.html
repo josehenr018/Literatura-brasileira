@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugerir Obra - Acervo Literário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Acervo Literário</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="cadastro.html">Sugerir Obra</a></li>
+                    <li class="nav-item"><a class="nav-link" href="listagem.html">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="autores.html">Autores (Extra)</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5 flex-grow-1">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-primary text-white text-center py-3">
+                        <h2 class="h4 mb-0">Me sugira uma nova leitura!</h2>
+                    </div>
+                    <div class="card-body p-4">
+                        <p class="text-muted text-center mb-4">Tem algum livro de literatura brasileira que você acha que eu preciso ler? Preencha os dados abaixo.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="nomeObra" class="form-label">Nome da Obra</label>
+                                <input type="text" class="form-control" id="nomeObra" placeholder="Ex: Helena ou Água Viva" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="nomeAutor" class="form-label">Autor(a)</label>
+                                <input type="text" class="form-control" id="nomeAutor" placeholder="Ex: Machado de Assis" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="emailUsuario" class="form-label">Seu E-mail (para eu agradecer depois)</label>
+                                <input type="email" class="form-control" id="emailUsuario" placeholder="nome@exemplo.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="periodoLiterario" class="form-label">Qual o estilo ou período?</label>
+                                <select class="form-select" id="periodoLiterario" required>
+                                    <option value="" selected disabled>Selecione uma opção...</option>
+                                    <option value="1">Romantismo</option>
+                                    <option value="2">Realismo / Naturalismo</option>
+                                    <option value="3">Modernismo</option>
+                                    <option value="4">Literatura Contemporânea</option>
+                                    <option value="5">Não tenho certeza</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="motivoSugestao" class="form-label">Por que eu deveria ler esse livro?</label>
+                                <textarea class="form-control" id="motivoSugestao" rows="4" placeholder="Me conte um pouco sobre a história e por que é bom..." required></textarea>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modalSucesso">
+                                    Enviar Sugestão
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSucesso" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Sugestão Recebida!</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <h4 class="text-success mb-3">Muito obrigado!</h4>
+                    <p class="mb-0">Sua recomendação foi enviada com sucesso. Vou colocar na minha lista de próximas leituras e logo ela aparecerá no catálogo de livros lidos!</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="listagem.html" class="btn btn-outline-success">Ver Catálogo de Lidos</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="py-4 bg-dark mt-auto">
+        <div class="container"><p class="m-0 text-center text-white">Projeto Interface Web - 2026</p></div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

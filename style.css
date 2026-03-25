@@ -1,0 +1,42 @@
+/* Efeito de Hover (Pop-up) para os cards de livros */
+
+.card-livro {
+    position: relative;
+    overflow: hidden; /* Garante que o texto não vaze da imagem */
+    border-radius: 0.375rem; /* Mantém as bordas arredondadas do Bootstrap */
+    height: 400px; /* Altura fixa para manter as imagens padronizadas */
+}
+
+.card-livro img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o card sem distorcer */
+    transition: transform 0.3s ease; /* Animação suave na imagem */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo preto semi-transparente */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    opacity: 0; /* Começa invisível */
+    transition: opacity 0.4s ease-in-out; /* Tempo da animação de aparecer */
+}
+
+/* O que acontece quando o mouse passa por cima do card */
+.card-livro:hover .card-overlay {
+    opacity: 1; /* O texto e fundo escuro aparecem */
+}
+
+.card-livro:hover img {
+    transform: scale(1.05); /* Um leve zoom na imagem de fundo */
+}
