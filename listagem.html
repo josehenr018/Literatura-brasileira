@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo - Acervo Literário</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light d-flex flex-column min-vh-100">
+<body class="bg-body d-flex flex-column min-vh-100">
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Acervo Literário</a>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom py-3">
+        <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand fw-bold text-uppercase tracking-wide" href="index.html">Acervo Literário</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-2">
                     <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="cadastro.html">Sugerir Obra</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="listagem.html">Catálogo</a></li>
@@ -27,80 +28,83 @@
     </nav>
 
     <div class="container my-5 flex-grow-1">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="mb-4 border-bottom pb-2">Catálogo de Obras (Lidos)</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="d-flex justify-content-between align-items-end border-bottom border-secondary pb-3 mb-4">
+                    <h2 class="fw-light mb-0">Catálogo de Obras (Lidos)</h2>
+                    <span class="text-body-secondary small text-uppercase tracking-wide">6 Registros</span>
+                </div>
                 
-                <div class="table-responsive bg-white shadow-sm rounded p-3">
-                    <table class="table table-hover align-middle">
-                        <thead class="table-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Título da Obra</th>
-                                <th scope="col">Autor(a)</th>
-                                <th scope="col">Período Literário</th>
-                                <th scope="col" class="text-center">Ações</th>
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover align-middle mb-0">
+                        <thead>
+                            <tr class="text-uppercase small tracking-wide text-body-secondary">
+                                <th scope="col" class="border-bottom-0 pb-3">#</th>
+                                <th scope="col" class="border-bottom-0 pb-3">Título da Obra</th>
+                                <th scope="col" class="border-bottom-0 pb-3">Autor(a)</th>
+                                <th scope="col" class="border-bottom-0 pb-3">Período</th>
+                                <th scope="col" class="text-end border-bottom-0 pb-3">Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody class="border-top-0">
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Tudo é Rio <span class="badge bg-danger ms-1">Favorito</span></td>
-                                <td>Carla Madeira</td>
-                                <td>Contemporâneo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro1">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">01</th>
+                                <td class="fw-bold">Tudo é Rio <span class="badge text-bg-light ms-2 rounded-pill px-2">Favorito</span></td>
+                                <td class="fst-italic text-body-secondary">Carla Madeira</td>
+                                <td><span class="badge bg-secondary rounded-pill">Contemporâneo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro1">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">2</th>
-                                <td>A Hora da Estrela</td>
-                                <td>Clarice Lispector</td>
-                                <td>Modernismo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro2">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">02</th>
+                                <td class="fw-bold">A Hora da Estrela</td>
+                                <td class="fst-italic text-body-secondary">Clarice Lispector</td>
+                                <td><span class="badge bg-secondary rounded-pill">Modernismo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro2">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">3</th>
-                                <td>O Alienista</td>
-                                <td>Machado de Assis</td>
-                                <td>Realismo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro3">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">03</th>
+                                <td class="fw-bold">O Alienista</td>
+                                <td class="fst-italic text-body-secondary">Machado de Assis</td>
+                                <td><span class="badge bg-secondary rounded-pill">Realismo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro3">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">4</th>
-                                <td>Capitães da Areia</td>
-                                <td>Jorge Amado</td>
-                                <td>Modernismo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro4">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">04</th>
+                                <td class="fw-bold">Capitães da Areia</td>
+                                <td class="fst-italic text-body-secondary">Jorge Amado</td>
+                                <td><span class="badge bg-secondary rounded-pill">Modernismo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro4">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">5</th>
-                                <td>Vidas Secas</td>
-                                <td>Graciliano Ramos</td>
-                                <td>Modernismo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro5">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">05</th>
+                                <td class="fw-bold">Vidas Secas</td>
+                                <td class="fst-italic text-body-secondary">Graciliano Ramos</td>
+                                <td><span class="badge bg-secondary rounded-pill">Modernismo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro5">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">6</th>
-                                <td>Iracema</td>
-                                <td>José de Alencar</td>
-                                <td>Romantismo</td>
-                                <td class="text-center">
-                                    <button class="btn btn-sm btn-info text-white" data-bs-toggle="modal" data-bs-target="#modalLivro6">Detalhes</button>
-                                    <button class="btn btn-sm btn-danger" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
+                                <th scope="row" class="text-body-secondary fw-normal">06</th>
+                                <td class="fw-bold">Iracema</td>
+                                <td class="fst-italic text-body-secondary">José de Alencar</td>
+                                <td><span class="badge bg-secondary rounded-pill">Romantismo</span></td>
+                                <td class="text-end">
+                                    <button class="btn btn-sm btn-outline-light rounded-pill px-3 me-1" data-bs-toggle="modal" data-bs-target="#modalLivro6">Detalhes</button>
+                                    <button class="btn btn-sm btn-outline-danger rounded-pill px-3" onclick="alert('Ação administrativa: Tem certeza que deseja remover este livro do catálogo do sistema?')">Excluir</button>
                                 </td>
                             </tr>
                         </tbody>
@@ -110,104 +114,98 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro1" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro1" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">Tudo é Rio</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">Tudo é Rio</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autora:</strong> Carla Madeira</p>
-                    <p>Uma narrativa intensa e poética que cruza os caminhos de Dalva, Venâncio e da prostituta Lucy. Uma obra sobre amor, perda, perdão e os limites humanos.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">Carla Madeira</p>
+                    <p class="fw-light">Uma narrativa intensa e poética que cruza os caminhos de Dalva, Venâncio e da prostituta Lucy. Uma obra sobre amor, perda, perdão e os limites humanos.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro2" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro2" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">A Hora da Estrela</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">A Hora da Estrela</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autora:</strong> Clarice Lispector</p>
-                    <p>A história da inocente e marginalizada Macabéa, uma datilógrafa alagoana no Rio de Janeiro. É a última obra publicada em vida por Clarice.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">Clarice Lispector</p>
+                    <p class="fw-light">A história da inocente e marginalizada Macabéa, uma datilógrafa alagoana no Rio de Janeiro. É a última obra publicada em vida por Clarice.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro3" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro3" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">O Alienista</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">O Alienista</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autor:</strong> Machado de Assis</p>
-                    <p>O clássico conto sobre o Dr. Simão Bacamarte, que constrói a Casa Verde em Itaguaí e começa a internar todos na cidade, questionando a fina linha entre sanidade e loucura.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">Machado de Assis</p>
+                    <p class="fw-light">O clássico conto sobre o Dr. Simão Bacamarte, que constrói a Casa Verde em Itaguaí e começa a internar todos na cidade, questionando a fina linha entre sanidade e loucura.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro4" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro4" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">Capitães da Areia</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">Capitães da Areia</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autor:</strong> Jorge Amado</p>
-                    <p>Retrata a vida de um grupo de meninos de rua abandonados em Salvador, liderados por Pedro Bala, expondo a desigualdade social com muita sensibilidade.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">Jorge Amado</p>
+                    <p class="fw-light">Retrata a vida de um grupo de meninos de rua abandonados em Salvador, liderados por Pedro Bala, expondo a desigualdade social com muita sensibilidade.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro5" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro5" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">Vidas Secas</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">Vidas Secas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autor:</strong> Graciliano Ramos</p>
-                    <p>A dura jornada da família de Fabiano, Sinha Vitória, os meninos e a cachorra Baleia, que tentam sobreviver à seca implacável do sertão nordestino.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">Graciliano Ramos</p>
+                    <p class="fw-light">A dura jornada da família de Fabiano, Sinha Vitória, os meninos e a cachorra Baleia, que tentam sobreviver à seca implacável do sertão nordestino.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="modalLivro6" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="modalLivro6" tabindex="-1" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h5 class="modal-title">Iracema</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content bg-dark border-secondary">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold">Iracema</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <p><strong>Autor:</strong> José de Alencar</p>
-                    <p>O famoso romance indianista que narra a história de amor entre a "virgem dos lábios de mel", a índia Iracema, e o colonizador português Martim.</p>
-                    <span class="badge bg-success">Leitura Concluída</span>
+                <div class="modal-body px-4 pb-4">
+                    <p class="fst-italic text-body-secondary mb-4">José de Alencar</p>
+                    <p class="fw-light">O famoso romance indianista que narra a história de amor entre a "virgem dos lábios de mel", a índia Iracema, e o colonizador português Martim.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer class="py-4 bg-dark mt-auto">
-        <div class="container"><p class="m-0 text-center text-white">Projeto Interface Web - 2026</p></div>
+    <footer class="py-5 bg-body-tertiary mt-5 border-top">
+        <div class="container"><p class="m-0 text-center text-body-secondary small tracking-wide">&copy; 2026 Acervo Literário. Cultivando a nossa história.</p></div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
